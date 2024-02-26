@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
         const storedName = urlParams.get('name');
         if (storedName) {
-            document.querySelector('.message').innerHTML = `Welcome, ${storedName}!`;
+            document.querySelector('.message').innerHTML = 'Welcome, '+storedName;
         }
         const storedSecret = localStorage.getItem('secret');
         if (storedSecret) {
