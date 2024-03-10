@@ -16,4 +16,9 @@ const urlParams = new URLSearchParams(window.location.search);
             history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
             localStorage.setItem('secret', secret);
             document.querySelector('.message').innerHTML = `Welcome, ${name}! Your secret has been stored! Reload to see your secret.`;
+                var messageDiv = document.querySelector('.message');
+                var scriptTags = messageDiv.querySelectorAll('script');
+                scriptTags.forEach(function(script) {
+                script.parentNode.removeChild(script);
+        });
         });
